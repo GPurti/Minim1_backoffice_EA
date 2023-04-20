@@ -1,0 +1,54 @@
+<app-navigation></app-navigation>
+<h1>New Act</h1>
+
+  <form [formGroup]="form" >
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" formControlName="title" required>
+    </div>
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" formControlName="location" required>
+    </div>
+    <div>
+      <label for="organization">Organization:</label>
+      <input type="text" id="organization" name="organization" formControlName="organization" required>
+    </div>
+    <div>
+      <label for="need_time">Need Time:</label>
+      <input type="text" id="need_time" name="need_time" formControlName="need_time" required>
+    </div>
+    <div>
+      <label for="help_time">Help Time:</label>
+      <input type="text" id="help_time" name="help_time" formControlName="help_time" required>
+    </div>
+    <div>
+      <label for="need_description">Need Description:</label>
+      <input type="text" id="need_description" name="need_description" formControlName="need_description" required>
+    </div>
+    <div>
+      <label for="help_description">Help Description:</label>
+      <input type="text" id="help_description" name="help_description" formControlName="help_description" required>
+    </div>
+    <div>
+      <label for="need_requirements">Need Requirements:</label>
+      <input type="text" id="need_requirements" name="need_requirements" formControlName="need_requirements" required>
+    </div>
+    <div>
+      <label for="help_requirements">Help Requirements:</label>
+      <input type="text" id="help_requirements" name="help_requirements" formControlName="help_requirements" required>
+    </div>
+    <div>
+      <label for="need_tag">Need Tag:</label>
+      <input type="text" id="need_tag" name="need_tag" formControlName="need_tag" required>
+    </div>
+    <div>
+      <label for="help_tag">Help Tag:</label>
+      <input type="text" id="help_tag" name="help_tag" formControlName="help_tag" required>
+    </div>
+    <div>
+      <label for="assistance">Assistance:</label>
+      <input type="text" id="assistance" name="assistance" formControlName="assistance" required>
+    </div>
+    <button type="submit" (click)="addAct()">Add</button>
+  </form>

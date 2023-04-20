@@ -1,0 +1,47 @@
+<app-navigation></app-navigation>
+<h2>Organizations list</h2>
+
+<div class="container">
+  <table class="org-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Advertisers</th>
+        <th>
+          <button class="btn-add" (click)="addOrganization()">Add organization</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let organization of organizations">
+        <td>{{ organization.name }}</td>
+        <td>{{ organization.email }}</td>
+        <ul>
+          <li *ngFor="let advertiserId of organization.advertisers">
+              {{ advertiserId }}
+          </li>
+        </ul>            
+        <td>
+          <button class="btn edit-btn" (click)="editOrganization(organization)">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+          <button class="btn delete-btn" (click)="confirmDelete(organization)">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          <div class="pagination">
+            <button class="paginate-btn" [disabled]="currentPage === 1" (click)="prevPage()"><</button>
+            <span>{{ currentPage }}/{{ totalPages }}</span>
+            <button class="paginate-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">></button>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

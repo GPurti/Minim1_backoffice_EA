@@ -1,0 +1,68 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.org-table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.org-table th,
+.org-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.org-table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.org-table td:last-child, .org-table th:last-child {
+    text-align: right;
+}
+
+.paginate-btn {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(216, 216, 216);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.edit-btn, .btn-add {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: rgb(170, 4, 4);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.fa-edit,
+.fa-trash-alt {
+    margin-right: 5px;
+}

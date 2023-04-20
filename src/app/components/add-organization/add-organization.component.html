@@ -1,0 +1,22 @@
+<app-navigation></app-navigation>
+<h1>Add Organization</h1>
+
+<form [formGroup]="form">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" formControlName="name" required>
+  </div>
+  <!--<div>
+    <label for="website">Website:</label>
+    <input type="text" id="website" name="website" formControlName="website">
+  </div>-->
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" formControlName="email" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" formControlName="password" required>
+  </div>
+  <button type="submit" (click)="addOrganization()">Add</button>
+</form>

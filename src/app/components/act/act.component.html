@@ -1,0 +1,62 @@
+<app-navigation></app-navigation>
+<h1>Acts list</h1>
+
+<div class="container">
+  <table class="org-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Organization</th>
+        <th>Need Time</th>
+        <th>Help Time</th>
+        <th>Need Description</th>
+        <th>Help Description</th>
+        <th>Need Requirements</th>
+        <th>Help Requirements</th>
+        <th>Need Tag</th>
+        <th>Help Tag</th>
+        <th>Assistance</th>
+        <th>
+          <button class="btn-add" (click)="addAct()">Add act</button>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let act of acts">
+        <td>{{ act.title }}</td>
+        <td>{{ act.location }}</td>
+        <td>{{ act.organization }}</td>
+        <td>{{ act.need_time }}</td>
+        <td>{{ act.help_time }}</td>
+        <td>{{ act.need_description }}</td>
+        <td>{{ act.help_description }}</td>
+        <td>{{ act.need_requirements }}</td>
+        <td>{{ act.help_requirements }}</td>
+        <td>{{ act.need_tag }}</td>
+        <td>{{ act.help_tag }}</td>
+        <td>{{ act.assistance }}</td>
+        <td>
+          <button class="btn edit-btn" (click)="editAct(act)">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+          <button class="btn delete-btn" (click)="confirmDelete(act)">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">
+          <div class="pagination">
+            <button class="paginate-btn" [disabled]="currentPage === 1" (click)="prevPage()"><</button>
+            <span>{{ currentPage }}/{{ totalPages }}</span>
+            <button class="paginate-btn" [disabled]="currentPage === totalPages" (click)="nextPage()">></button>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

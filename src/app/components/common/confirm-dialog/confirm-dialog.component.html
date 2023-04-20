@@ -1,0 +1,11 @@
+
+<div class="dialog-container">
+    <div class="dialog-content">
+      <div class="dialog-close" (click)="closeDialog()">&times;</div>
+      <div class="dialog-message">{{ data.message }}</div>
+      <div class="dialog-buttons">
+        <button mat-flat-button id="no-button" class="dialog-button" [mat-dialog-close]="false">{{ data.leftBtn }}</button>
+        <button mat-flat-button id="yes-button" class="dialog-button" [mat-dialog-close]="true">{{ data.rightBtn }}</button>
+      </div>
+    </div>
+  </div>
