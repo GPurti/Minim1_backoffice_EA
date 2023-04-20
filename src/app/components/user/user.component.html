@@ -10,6 +10,7 @@
               <th>Surname</th>
               <th>Email</th>
               <th>Role</th>
+              <th>Logs</th>
               <th>
                 <button class="btn-add" (click)="addUser()">Add user</button>
               </th>
@@ -21,7 +22,14 @@
               <td>{{user.surname}}</td>
               <td>{{user.email}}</td>
               <td>{{user.role}}</td>
+              <ul>
+                <li *ngFor="let logId of user.logs">
+                    {{ logId }}
+                </li>
+              </ul> 
               <td>
+                <button (click)="logUser(user)" class="btn-success">Edit Log</button>
+                <button (click)="logDeleteUser(user._id)" class="btn-success">Delete Log</button>
                 <button (click)="passUser(user)" class="btn-success">Edit</button>
                 <button (click)="confirmDelete(user._id)" class="btn-danger">Delete</button>
               </td>

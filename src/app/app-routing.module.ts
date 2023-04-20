@@ -14,6 +14,7 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { AddOrganizationComponent } from './components/add-organization/add-organization.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { LogComponent } from './components/log/log.component';
 
 const routes: Routes = [
   {
@@ -63,6 +64,11 @@ const routes: Routes = [
   {
     path: 'edit-organization/:id',
     component: EditOrganizationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'logs/:id',
+    component: LogComponent,
     canActivate: [AuthGuard]
   }
 ];
